@@ -52,6 +52,10 @@ package{'php72w-cli':
   require => Exec['Intall WebTatic'],
 } ->
 
+package{'php72w-fpm':
+  ensure  => present,
+  require => Exec['Intall WebTatic'],
+} ->
 
 package{'php72w-mbstring':
   ensure  => present,
