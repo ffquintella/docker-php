@@ -22,8 +22,8 @@ COPY Puppet/manifests /etc/puppet/manifests/
 COPY Puppet/modules /etc/puppet/modules/
 COPY Puppet/hiera.yaml /etc/puppet/
 COPY Configs/php/php.ini /etc/php.ini
-#COPY tools /tools
-RUN /opt/puppetlabs/bin/puppet apply  --modulepath=/etc/puppet/modules /etc/puppet/manifests/base72.pp  ;\
+COPY Scripts/start-service.sh /usr/local/bin/start-service.sh
+RUN chmod +x /usr/local/bin/start-service.sh ; /opt/puppetlabs/bin/puppet apply  --modulepath=/etc/puppet/modules /etc/puppet/manifests/base72.pp  ;\
  yum clean all ; rm -rf /tmp/* ; rm -rf /var/cache/* ; rm -rf /var/tmp/* ; rm -rf /var/opt/staging
 
 WORKDIR "/app"
