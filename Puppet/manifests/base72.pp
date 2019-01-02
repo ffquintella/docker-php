@@ -31,7 +31,7 @@ package{'git':
   ensure => present,
 }
 
-package{'samba-client':
+package{'nginx':
   ensure => present,
 }
 
