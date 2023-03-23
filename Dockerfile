@@ -1,8 +1,8 @@
-FROM ffquintella/docker-puppet:1.5.1
+FROM ffquintella/docker-puppet:8.8.2
 
 MAINTAINER Felipe Quintella <docker-php@felipe.quintella.email>
 
-LABEL version="7.2.1"
+LABEL version="8.2.4"
 LABEL description="This is a base image to use PHP"
 
 #ENV LANG=en_US.UTF-8
@@ -23,7 +23,7 @@ COPY Puppet/modules /etc/puppet/modules/
 COPY Puppet/hiera.yaml /etc/puppet/
 COPY Configs/php/php.ini /etc/php.ini
 COPY Scripts/start-service.sh /usr/local/bin/start-service.sh
-RUN chmod +x /usr/local/bin/start-service.sh ; /opt/puppetlabs/bin/puppet apply  --modulepath=/etc/puppet/modules /etc/puppet/manifests/base72.pp  ;\
+RUN chmod +x /usr/local/bin/start-service.sh ; /opt/puppetlabs/bin/puppet apply  --modulepath=/etc/puppet/modules /etc/puppet/manifests/base82.pp  ;\
  yum clean all ; rm -rf /tmp/* ; rm -rf /var/cache/* ; rm -rf /var/tmp/* ; rm -rf /var/opt/staging
 
 WORKDIR "/app"
