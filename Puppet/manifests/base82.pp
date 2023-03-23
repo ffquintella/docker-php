@@ -91,7 +91,7 @@ wget::fetch { "Download composer phar":
 } ->
 
 wget::fetch { "Download phing phar":
-  source      => 'http://www.phing.info/get/phing-2.16.1.phar',
+  source      => 'http://www.phing.info/get/phing-2.17.4.phar',
   destination => '/libs/phing.phar',
   timeout     => 0,
   verbose     => false,
