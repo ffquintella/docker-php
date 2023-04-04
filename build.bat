@@ -1,0 +1,1 @@
+docker.exe build -t ffquintella/docker-php:latest .

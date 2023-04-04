@@ -1,8 +1,8 @@
-FROM ffquintella/docker-puppet:8.8.2
+FROM ffquintella/docker-puppet:9.7.1
 
 MAINTAINER Felipe Quintella <docker-php@felipe.quintella.email>
 
-LABEL version="8.2.4"
+LABEL version="8.2.5"
 LABEL description="This is a base image to use PHP"
 
 #ENV LANG=en_US.UTF-8
